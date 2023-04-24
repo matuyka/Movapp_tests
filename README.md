@@ -1,0 +1,1 @@
+Movapp tests in Cypress
