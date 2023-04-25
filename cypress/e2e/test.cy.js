@@ -1,11 +1,15 @@
 /// <reference types="Cypress" />
 
-describe("movapp.cz", () => {
+describe("Test Movapp.cz", () => {
   beforeEach(() => {
     cy.visit("https://www.movapp.cz/");
   });
 
-  it("should have the correct h1", () => {
-    cy.get("h1").should("contain.text", "Naučte se základy češtiny a ukrajinštiny pro běžné životní situace");
+  it("Test that page should have the correct h1", () => {
+    cy.get("h1").should("be.visible").and("have.length", 1).and("contain.text", "Naučte se základy češtiny a ukrajinštiny pro běžné životní situace");
+    cy.title().should("be.eq", "Movapp.cz – aby se Češi a Ukrajinci snadno domluvili")
+
   });
 });
+
+       
